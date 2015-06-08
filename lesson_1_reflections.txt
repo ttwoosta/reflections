@@ -1,0 +1,5 @@
+Learning Git is something that people should learn before starting develop web, app.
+I'm diff than others, cuz I'm working alone. So most of my projects doesn't needs to
+version-control. What im thinking is git will help me keep tracks what changes made to source code.
+Am I suppose to blank empty space when delete something. what about comments? like adding few lines of
+comment line number won't stay the same right? question is how git control keep track all of those changes
