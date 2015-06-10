@@ -3,3 +3,13 @@ I'm diff than others, cuz I'm working alone. So most of my projects doesn't need
 version-control. What im thinking is git will help me keep tracks what changes made to source code.
 Am I suppose to blank empty space when delete something. what about comments? like adding few lines of
 comment line number won't stay the same right? question is how git control keep track all of those changes
+
+Why you think some version control system, like Git, allow saving multiple files in one commit,
+while other, like Google Docs, treat each file seperately?
+
+- Git keep track date time modified, and when commit change made only file have change are save.
+
+How can you use the commnads git log and git diff to view the history of files?
+- git log: show complete history commnit by team member detail info are commit id, author, Date, comment of changes.
+- git diff: compare source code between  old and new versions includes delete and added lines.
+ 

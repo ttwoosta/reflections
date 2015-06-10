@@ -1,0 +1,21 @@
+
+ How is the staging area different from the working directory and the repository?
+ What value do you think it offers?
+ - staging area was keeping tracks all of files of working directory. they contains lastest changes
+ of files that hasn't been commit yet. Offering undo, revert state.
+
+ How can you use the staging area to make sure you have one commit per logical change?
+ - make sure add 1 file to staging area and commit right away.
+ - do not make too many logical changes on 1 file before commit
+ - If change relative to multiple files then add them alltogether 
+
+ What are some situations when branches would be helpful in keeping your history organized?
+ How would branches help?
+ - Move to different piece of work, work on something different, new features.
+ - Think of this like context, fix bug might cause other logic fail.
+ - Branches keep your project organize particularlly when you project public where you have master branch which your production, quality work
+ - Some change that have been tested. Branches create allows making changes without effectting
+ master branch 
+
+ How do the diagrams help you visualize the branch structure?
+ - Visual diagram help keep track changing in timeline, eliminate unreachable commit
