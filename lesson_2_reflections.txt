@@ -1,21 +1,86 @@
+What happens when you initialize a repository? Why do you need to do it?
 
- How is the staging area different from the working directory and the repository?
- What value do you think it offers?
- - staging area was keeping tracks all of files of working directory. they contains lastest changes
- of files that hasn't been commit yet. Offering undo, revert state.
+After you initialize a repository, Git creates a .git folder, which will 
+contain much metadata corresponding to all of the commits. However, Git does 
+not commit any of the files in the folder, which you can view by entering 'git 
+log' into the prompt. Git also does not add any of the files to be tracked 
+through commits, which you can view by entering 'git status' into the prompt. 
+You need to initialize a repository, because not all folders will store change 
+history, only folders initialized as repositories by Git.
 
- How can you use the staging area to make sure you have one commit per logical change?
- - make sure add 1 file to staging area and commit right away.
- - do not make too many logical changes on 1 file before commit
- - If change relative to multiple files then add them alltogether 
 
- What are some situations when branches would be helpful in keeping your history organized?
- How would branches help?
- - Move to different piece of work, work on something different, new features.
- - Think of this like context, fix bug might cause other logic fail.
- - Branches keep your project organize particularlly when you project public where you have master branch which your production, quality work
- - Some change that have been tested. Branches create allows making changes without effectting
- master branch 
 
- How do the diagrams help you visualize the branch structure?
- - Visual diagram help keep track changing in timeline, eliminate unreachable commit
+How is the staging area different from the working directory and the 
+repository? What value do you think it offers?
+
+The staging area is a file that contains the information of everything that 
+will go into the next commit. This is different from the working directory, 
+because it does not necessarily need to include every file from the folder, 
+only the ones the user wants to add to the commit. This is also different from 
+the repository, because it only contains the information of everything that 
+could be committed, but has not necessarily yet.
+
+
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+Before adding any files to the staging area, you can make sure you have one 
+logical change by using 'git diff', which will display the differences between 
+the files in the working directory and the files in the staging area, which 
+are currently copies of the files from the latest commit. If there is only one 
+logical change, then you can add the files to the staging area, and to double 
+check, you can type 'git diff --staged' to see the differences between the 
+files in the staging area and the files from the latest commit. Then you can 
+use 'git commit' and type in a message describing the logical change to commit 
+the files.
+
+
+
+What are some situations when branches would be helpful in keeping your 
+history organized? How would branches help?
+
+Branches are particularly useful when trying to implement experimental changes 
+to your working code. They are helpful, because they allow the user to work on 
+those experimental changes without affecting the original working code, in 
+case something goes wrong. Once the user gets the experimental code working, 
+they can simply merge the two branches together to incorporate the new feature 
+into the master branch.
+
+
+
+How do the diagrams help you visualize the branch structure?
+
+The diagrams help visualize the branch structure by showing where each branch 
+'branches off' using a linked list graph. By following the path from the head 
+of each branch to the initial commit, we can see the entire git log of each 
+branch. We can see where the branches shared the last commit, and we can see 
+which commits are reachable (or implemented) in each branch. This is also 
+helpful, because it helps us understand why we get the 'detached HEAD' warning 
+message when we checkout a previous commit.
+
+
+
+What is the result of merging two branches together? Why do we represent it in 
+the diagram the way we do?
+
+The result of merging two branches together is the combined changes from both 
+branches. This is usually performed when an experimental change on a separate 
+branch from 'master' is completed, and is incorporated into the working 
+version of the code. It is represented as the newest commit pointing to both 
+previous commits from the two merged branches, because both commits are the 
+parents of the newest commit.
+
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges 
+manually?
+
+Git attempts to automatically merge two commits together, which can save quite 
+a bit of time and make the merging process much less tedious. However, if Git 
+were to attempt to automatically merge in every scenario, this could lead to 
+broken code. This is because there are frequently merge conflicts, in which 
+two similar areas of code are modified from the original version. In this 
+case, Git doesn't know which version to choose, or whether the two changes 
+should be combined together, so it leaves it to the user to manually merge the 
+code. Althought this can sometimes be painfully obvious, this helps ensure 
+that the merge creates working code.
