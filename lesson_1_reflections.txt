@@ -1,97 +1,87 @@
-######################
-# COPIED FROM 'tcrawf23'
-######################
 
 ######################
-How did viewing a diff between two versions of a file help you see the bug 
-that was introduced?
+# COPIED "cbuckey-uda"
 ######################
 
-Viewing the diff between the two versions of a file allows the user to quickly 
-view all of the differences between the two versions. This is particularly 
-helpful when trying to identify bugs, because a bug is only introduced into 
-new versions through changes made to the code. Diff allows the user to see 
-these only these changes, which expedites the process of scanning through 
-thousands of lines of code for any typos or whatnot.
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    Since I knew that the HTML was working before the changes were made, I knew
+    that the parts that changed had to be the problem.  This allowed me to only
+    think about things that were different, rather than trying to think about
+    the entire file.
 
 
-######################
-How could having easy access to the entire history of a file make you a more 
-efficient programmer in the long term?
-######################
+How could having easy access to the entire history of a file make you a better
+programmer in the long term?
 
-Bugs love finding their ways into our code. The difference between a good 
-programmer and a great programmer is not only the quality of code that they 
-write, but also their efficiency. This largely includes debugging, and 
-version control can help severly cut the amount of time searching for bugs. 
-It not only helps to have a previous version of the code, but the full history 
-of the code. The majority of bugs go undetected, and when they are 
-discovered, the previous version of the code may still contain the same bug, 
-so it is necessary to go back to even older versions.
+    By allowing me to compare broken versions of code to working versions,
+    having the history of my project could enable me to find bugs more quickly.
+    I might also be less afraid of breaking my code and more willing to try
+    rewriting it if I know that I can always go back to a working version.
+    Finally, if I forget why I wrote some line of code, I might understand
+    better by finding the commit where it was introduced and getting the context
+    for that change.
 
-######################
-What do you think are the pros and cons of manually choosing when to create a 
-commit, like you do in Git, vs having versions automatically saved, like 
-Google docs does?
-######################
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+    
+    Having versions saved automatically is less effort on my part.  There is a
+    lower barrier to entry.  However, if versions of my code were saved
+    automatically, there is no guarantee a working version would ever be saved.
+    If I wanted to compare a broken version of my code to a previous working
+    version, I might not actually have a working version.  Finally, when I save
+    versions myself, I can create a meaningful name for each version, which
+    makes the versions a lot easier to navigate.  With autosaved versions, it
+    can be difficult to understand what changes are introduced in each version.
 
-One of the most important aspects of version control is its helpfulness during 
-debugging. When a bug is introduced from one version of code to the next, the 
-programmer can easily look back through the changes to determine what created 
-the bug. However, this can only be done if the previous version was saved at a 
-logical point in development. If the code was saved halfway through typing a 
-word, this does little to help the programmer find the error, considering the 
-code won't even compile. Although having versions automatically saved can be 
-useful when it comes to those who save too little, manually choosing when to 
-save will create more logical commits.
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
 
-######################
-Why do you think some version control systems, like Git, allow saving 
-multiple files in one commit, while others, like Google Docs, treat 
-each file separately?
-######################
+    When files are interdependent, as they often are in code, changing multiple
+    files in each commit makes sense.  A single logical change may touch more
+    than one file, and it would be nice to group the entire change into one
+    commit.
 
-In Google Docs, most files are unrelated to each other, so there is no need 
-to group multiple files into every commit. When writing code, on the other 
-hand, certain changes can cause revisions in multiple files, and because 
-Git commits should be done when a logical change has occured, these files 
-are all grouped together in each commit. Not all code files are grouped 
-together in each commit, only those that are logically grouped together.
+    When files are independent, tracking them together introduces unnecessary
+    overhead when looking back through the history.  If I changed two unrelated
+    files, then committed the changes together, it would be harder to revert to
+    a previous version of one file without reverting to a previous version of
+    another, which I probably wouldn't want to do.
 
-######################
 How can you use the commands git log and git diff to view the history of files?
-######################
+    
+    git log shows all the commits, or versions, of my files that I have ever
+    saved (or that the person who created the history ever saved).  I can use
+    that to see the message for each commit, and get a quick idea of the sorts
+    of changes that have been made.
 
-Typing 'git log' into the prompt will display the full history of the commits. 
-This includes the commit id, the author of the commit, and some notes about 
-the changes made in the commit. Typing 'git diff' followed by the first commit 
-id and the second commit id will display all of the changes between the first 
-and second commits. The prompt will only display the lines where changes were 
-made instead of the full file, so it is easy to see what changed in the 
-different commits.
+    To dig deeper into any commit, I can use git diff to compare that commit to
+    the previous commit and see exactly what changes were introduced.
 
-######################
-How might using version control make you more confident to make changes that 
+How might using version control make you more confident to make changes that
 could break something?
-######################
+    
+    If I have previous versions saved, it will be easy to restore a previous,
+    working version of the code if I mess something up.  Not only that, it will
+    be easier to figure out why the code broke since I won't have to worry about
+    forgetting what I changed.
 
-By using version control, we can figure out exactly which commit introduced a 
-certain bug into our program. By then using diff between the commit that 
-introduced the bug and the previous commit, we can determine what changes were 
-made between the two versions. By viewing these changes, we can quickly 
-determine what changes created the bug, and therefore can much more quickly 
-and confidently eliminate the bug than going through line by line of our 
-current code to see what could be causing the issue.
-
-######################
 Now that you have your workspace set up, what do you want to try using Git for?
-######################
 
-Honestly, I'm not exactly sure what I want to try using Git for. I took this 
-course to learn more about Git and GitHub, because I knew they were very 
-useful and are used throughout the tech industry. I would, however, like to 
-use this for some actual projects to get some more hands on experience and 
-become more comfortable with Git.
+    I used Git to keep track of many of the documents I created when working on
+    this course!  For example, when working on the concept map for this course,
+    I stored that in Git.  Of course, I also used Git for these reflections.
+    
+    I also use it for my resume.  I like that when I delete older experience to
+    make room for newer experience, I don't have to worry about forgetting about
+    the details of the previous experience if I ever want to add it again. 
 
+    Of course, I also like to use Git for all of my programming projects.  Since
+    Git was designed with programmers in mind, it really shines for a coding
+    workflow.
 
+    I also just recently started using Git to track my .bash_profile, as well as
+    my .vimrc, which is a configuration file for my text editor.
 
