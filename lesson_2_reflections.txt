@@ -1,4 +1,11 @@
+
+######################
+# COPIED FROM 'tcrawf23'
+######################
+
+######################
 What happens when you initialize a repository? Why do you need to do it?
+######################
 
 After you initialize a repository, Git creates a .git folder, which will 
 contain much metadata corresponding to all of the commits. However, Git does 
@@ -8,10 +15,10 @@ through commits, which you can view by entering 'git status' into the prompt.
 You need to initialize a repository, because not all folders will store change 
 history, only folders initialized as repositories by Git.
 
-
-
+######################
 How is the staging area different from the working directory and the 
 repository? What value do you think it offers?
+######################
 
 The staging area is a file that contains the information of everything that 
 will go into the next commit. This is different from the working directory, 
@@ -20,9 +27,9 @@ only the ones the user wants to add to the commit. This is also different from
 the repository, because it only contains the information of everything that 
 could be committed, but has not necessarily yet.
 
-
-
+######################
 How can you use the staging area to make sure you have one commit per logical change?
+######################
 
 Before adding any files to the staging area, you can make sure you have one 
 logical change by using 'git diff', which will display the differences between 
@@ -34,10 +41,10 @@ files in the staging area and the files from the latest commit. Then you can
 use 'git commit' and type in a message describing the logical change to commit 
 the files.
 
-
-
+######################
 What are some situations when branches would be helpful in keeping your 
 history organized? How would branches help?
+######################
 
 Branches are particularly useful when trying to implement experimental changes 
 to your working code. They are helpful, because they allow the user to work on 
@@ -46,9 +53,9 @@ case something goes wrong. Once the user gets the experimental code working,
 they can simply merge the two branches together to incorporate the new feature 
 into the master branch.
 
-
-
+######################
 How do the diagrams help you visualize the branch structure?
+######################
 
 The diagrams help visualize the branch structure by showing where each branch 
 'branches off' using a linked list graph. By following the path from the head 
@@ -58,10 +65,10 @@ which commits are reachable (or implemented) in each branch. This is also
 helpful, because it helps us understand why we get the 'detached HEAD' warning 
 message when we checkout a previous commit.
 
-
-
+######################
 What is the result of merging two branches together? Why do we represent it in 
 the diagram the way we do?
+######################
 
 The result of merging two branches together is the combined changes from both 
 branches. This is usually performed when an experimental change on a separate 
@@ -70,10 +77,10 @@ version of the code. It is represented as the newest commit pointing to both
 previous commits from the two merged branches, because both commits are the 
 parents of the newest commit.
 
-
-
+######################
 What are the pros and cons of Git’s automatic merging vs. always doing merges 
 manually?
+######################
 
 Git attempts to automatically merge two commits together, which can save quite 
 a bit of time and make the merging process much less tedious. However, if Git 
@@ -84,3 +91,4 @@ case, Git doesn't know which version to choose, or whether the two changes
 should be combined together, so it leaves it to the user to manually merge the 
 code. Althought this can sometimes be painfully obvious, this helps ensure 
 that the merge creates working code.
+

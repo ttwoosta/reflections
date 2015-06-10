@@ -1,5 +1,11 @@
+######################
+# COPIED FROM 'tcrawf23'
+######################
+
+######################
 How did viewing a diff between two versions of a file help you see the bug 
 that was introduced?
+######################
 
 Viewing the diff between the two versions of a file allows the user to quickly 
 view all of the differences between the two versions. This is particularly 
@@ -9,9 +15,10 @@ these only these changes, which expedites the process of scanning through
 thousands of lines of code for any typos or whatnot.
 
 
-
+######################
 How could having easy access to the entire history of a file make you a more 
 efficient programmer in the long term?
+######################
 
 Bugs love finding their ways into our code. The difference between a good 
 programmer and a great programmer is not only the quality of code that they 
@@ -22,11 +29,11 @@ of the code. The majority of bugs go undetected, and when they are
 discovered, the previous version of the code may still contain the same bug, 
 so it is necessary to go back to even older versions.
 
-
-
+######################
 What do you think are the pros and cons of manually choosing when to create a 
 commit, like you do in Git, vs having versions automatically saved, like 
 Google docs does?
+######################
 
 One of the most important aspects of version control is its helpfulness during 
 debugging. When a bug is introduced from one version of code to the next, the 
@@ -38,11 +45,11 @@ code won't even compile. Although having versions automatically saved can be
 useful when it comes to those who save too little, manually choosing when to 
 save will create more logical commits.
 
-
-
+######################
 Why do you think some version control systems, like Git, allow saving 
 multiple files in one commit, while others, like Google Docs, treat 
 each file separately?
+######################
 
 In Google Docs, most files are unrelated to each other, so there is no need 
 to group multiple files into every commit. When writing code, on the other 
@@ -51,9 +58,9 @@ Git commits should be done when a logical change has occured, these files
 are all grouped together in each commit. Not all code files are grouped 
 together in each commit, only those that are logically grouped together.
 
-
-
+######################
 How can you use the commands git log and git diff to view the history of files?
+######################
 
 Typing 'git log' into the prompt will display the full history of the commits. 
 This includes the commit id, the author of the commit, and some notes about 
@@ -63,8 +70,10 @@ and second commits. The prompt will only display the lines where changes were
 made instead of the full file, so it is easy to see what changed in the 
 different commits.
 
+######################
 How might using version control make you more confident to make changes that 
 could break something?
+######################
 
 By using version control, we can figure out exactly which commit introduced a 
 certain bug into our program. By then using diff between the commit that 
@@ -74,12 +83,15 @@ determine what changes created the bug, and therefore can much more quickly
 and confidently eliminate the bug than going through line by line of our 
 current code to see what could be causing the issue.
 
-
-
+######################
 Now that you have your workspace set up, what do you want to try using Git for?
+######################
 
 Honestly, I'm not exactly sure what I want to try using Git for. I took this 
 course to learn more about Git and GitHub, because I knew they were very 
 useful and are used throughout the tech industry. I would, however, like to 
 use this for some actual projects to get some more hands on experience and 
 become more comfortable with Git.
+
+
+
